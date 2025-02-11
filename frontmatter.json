@@ -1,0 +1,80 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "astro",
+  "frontMatter.preview.host": "http://localhost:4321",
+  "frontMatter.content.publicFolder": "public",
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "blog",
+      "path": "[[workspace]]/src/content/blog"
+    },
+    {
+      "title": "data",
+      "path": "[[workspace]]/src/content/data"
+    },
+    {
+      "title": "data-s",
+      "path": "[[workspace]]/src/data"
+    }
+  ],
+
+
+  "frontMatter.data.folders": [{
+   "id": "data",
+    "path": "[[workspace]]/data/authors",
+    "singleEntry": true,
+    "schema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the author"
+        },
+        "slug": {
+          "type": "string",
+          "description": "The slug of the author"
+        },
+        "url": {
+          "type": "string",
+          "description": "The URL of the author"
+        }
+      }
+    }
+  }],
+
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "previewPath": "'blog'",
+      "filePrefix": null,
+      "clearEmpty": true,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "pubDate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "heroImage",
+          "type": "image",
+          "isPreviewImage": true
+        }
+      ]
+    }
+  ]
+}
